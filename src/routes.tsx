@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { Outlet, createBrowserRouter } from 'react-router-dom';
 import Navbar from './components/Navbar/index';
 import Footer from './components/Footer';
 import App from './App';
@@ -19,6 +19,7 @@ export const router = createBrowserRouter([
     element: (
       <>
         <Navbar />
+        <Outlet />
         <Footer />
       </>
     ),

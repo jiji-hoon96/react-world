@@ -1,10 +1,6 @@
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-
 export default function App() {
   return (
     <>
-      <Navbar />
       <div>
         <div className="home-page">
           <div className="banner">
@@ -134,7 +130,6 @@ export default function App() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
