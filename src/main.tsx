@@ -1,6 +1,3 @@
-import '../public/styles/main.css';
-import '../public/styles/ionicons.min.css';
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
