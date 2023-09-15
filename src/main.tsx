@@ -1,3 +1,5 @@
+import '../public/styles/global.css';
+import '../public/styles/reset.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
