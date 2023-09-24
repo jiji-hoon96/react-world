@@ -1,20 +1,19 @@
+import { ROUTES } from '@/routes';
+import { header, logo, headerLeft, headerRight } from './index.css';
+
 export default function Navbar() {
   return (
-    <nav>
-      <div>
-        <a href="/">conduit</a>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/login">Sign in</a>
-          </li>
-          <li>
-            <a href="/register">Sign up</a>
-          </li>
-        </ul>
+    <header className={header}>
+      <div className={headerLeft}>
+        <a href={ROUTES.ROOT} className={logo}>
+          conduit
+        </a>
       </div>
-    </nav>
+      <div className={headerRight}>
+        <a href={ROUTES.ROOT}>Home</a>
+        <a href={ROUTES.LOGIN}>Sign in</a>
+        <a href={ROUTES.REGISTER}>Sign up</a>
+      </div>
+    </header>
   );
 }

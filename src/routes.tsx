@@ -6,8 +6,9 @@ import ErrorPage from './pages/ErrorPage';
 import Article from './pages/Article';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import { mainLayout } from './routes.css';
 
-const ROUTES = {
+export const ROUTES = {
   ROOT: '/',
   ARTICLE: '/article/:id',
   LOGIN: '/login',
@@ -17,11 +18,11 @@ const ROUTES = {
 export const router = createBrowserRouter([
   {
     element: (
-      <>
+      <div className={mainLayout}>
         <Navbar />
         <Outlet />
         <Footer />
-      </>
+      </div>
     ),
     children: [
       {
