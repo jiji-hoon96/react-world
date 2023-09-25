@@ -1,4 +1,4 @@
-import { footer, footerContainer, footerLogo } from './index.css';
+import { footer, footerContainer, footerLogo, footerSpan, footerTag } from './index.css';
 
 export default function Footer() {
   return (
@@ -7,9 +7,12 @@ export default function Footer() {
         <a href="/" className={footerLogo}>
           conduit
         </a>
-        <span>
-          An interactive learning project from <a href="https://thinkster.io">Thinkster</a>. Code
-          &amp; design licensed under MIT.
+        <span className={footerSpan}>
+          An interactive learning project from{' '}
+          <a href="https://thinkster.io" className={footerTag}>
+            Thinkster
+          </a>
+          . Code &amp; design licensed under MIT.
         </span>
       </div>
     </footer>

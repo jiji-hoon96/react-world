@@ -1,19 +1,35 @@
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { ROUTES } from '@/routes';
-import { header, logo, headerLeft, headerRight } from './index.css';
+import { nav, navLogo, navLeftArea, navRightArea, navLink, navSelectLink } from './index.css';
+
+const navItems = [
+  { path: ROUTES.ROOT, text: 'Home' },
+  { path: ROUTES.LOGIN, text: 'Sign in' },
+  { path: ROUTES.REGISTER, text: 'Sign up' },
+];
 
 export default function Navbar() {
+  const location = useLocation();
+
   return (
-    <header className={header}>
-      <div className={headerLeft}>
-        <a href={ROUTES.ROOT} className={logo}>
+    <nav className={nav}>
+      <div className={navLeftArea}>
+        <Link to={ROUTES.ROOT} className={navLogo}>
           conduit
-        </a>
+        </Link>
       </div>
-      <div className={headerRight}>
-        <a href={ROUTES.ROOT}>Home</a>
-        <a href={ROUTES.LOGIN}>Sign in</a>
-        <a href={ROUTES.REGISTER}>Sign up</a>
+      <div className={navRightArea}>
+        {navItems.map((item) => (
+          <Link
+            key={item.path}
+            to={item.path}
+            className={location.pathname === item.path ? navSelectLink : navLink}
+          >
+            {item.text}
+          </Link>
+        ))}
       </div>
-    </header>
+    </nav>
   );
 }

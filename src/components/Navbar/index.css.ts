@@ -2,7 +2,7 @@ import { vars } from '@/styles/global.css';
 
 import { style } from '@vanilla-extract/css';
 
-export const header = style({
+export const nav = style({
   display: 'flex',
   justifyContent: 'space-between',
   maxWidth: 1140,
@@ -10,18 +10,29 @@ export const header = style({
   padding: '8px 16px',
 });
 
-export const logo = style({
+export const navLogo = style({
   color: vars.colors.primary,
 });
 
-export const headerLeft = style({
+export const navLeftArea = style({
   color: vars.colors.primary,
   fontSize: 24,
   fontWeight: 700,
 });
 
-export const headerRight = style({
+export const navRightArea = style({
   display: 'flex',
   alignItems: 'center',
   gap: 8,
+});
+
+export const navSelectLink = style({
+  color: vars.colors.black,
+});
+
+export const navLink = style({
+  color: vars.colors.gray,
+  ':hover': {
+    color: vars.colors.black,
+  },
 });
