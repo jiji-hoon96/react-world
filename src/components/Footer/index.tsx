@@ -1,15 +1,15 @@
-import { footer, footerContainer, footerLogo, footerSpan, footerTag } from './index.css';
+import * as styles from './index.css';
 
 export default function Footer() {
   return (
-    <footer className={footer}>
-      <div className={footerContainer}>
-        <a href="/" className={footerLogo}>
+    <footer className={styles.footer}>
+      <div className={styles.footerContainer}>
+        <a href="/" className={styles.footerLogo}>
           conduit
         </a>
-        <span className={footerSpan}>
+        <span className={styles.footerSpan}>
           An interactive learning project from{' '}
-          <a href="https://thinkster.io" className={footerTag}>
+          <a href="https://thinkster.io" className={styles.footerTag}>
             Thinkster
           </a>
           . Code &amp; design licensed under MIT.

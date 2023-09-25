@@ -1,7 +1,9 @@
+import Banner from './components/Banner';
+
 export default function App() {
   return (
     <div>
-      <h1>메인화면</h1>
+      <Banner />
     </div>
   );
 }
