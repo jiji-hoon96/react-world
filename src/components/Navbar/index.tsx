@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ROUTES } from '@/routes';
+
 import * as styles from './index.css';
+import { ROUTES } from '@/utils/routes';
 
 const navItems = [
-  { path: ROUTES.ROOT, text: 'Home' },
+  { path: ROUTES.HOME, text: 'Home' },
   { path: ROUTES.LOGIN, text: 'Sign in' },
   { path: ROUTES.REGISTER, text: 'Sign up' },
 ];
@@ -15,7 +16,7 @@ export default function Navbar() {
   return (
     <nav className={styles.nav}>
       <div className={styles.navLeftArea}>
-        <Link to={ROUTES.ROOT} className={styles.navLogo}>
+        <Link to={ROUTES.HOME} className={styles.navLogo}>
           conduit
         </Link>
       </div>

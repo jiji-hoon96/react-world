@@ -7,13 +7,7 @@ import Article from './pages/Article';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import { mainLayout } from './routes.css';
-
-export const ROUTES = {
-  ROOT: '/',
-  ARTICLE: '/article/:id',
-  LOGIN: '/login',
-  REGISTER: '/register',
-};
+import { ROUTES } from './utils/routes';
 
 export const router = createBrowserRouter([
   {
@@ -26,7 +20,7 @@ export const router = createBrowserRouter([
     ),
     children: [
       {
-        path: ROUTES.ROOT,
+        path: ROUTES.HOME,
         element: <App />,
         errorElement: <ErrorPage />,
       },
