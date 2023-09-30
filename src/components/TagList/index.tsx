@@ -9,11 +9,7 @@ export default function TagList() {
   return (
     <div className={styles.TagContainer}>
       <p className={styles.TagTitle}>Popular Tags</p>
-      {data?.tags.map((x: string) => (
-        <li key={} className={styles.TagItem}>
-          {x}
-        </li>
-      ))}
+      {data?.tags.map((x: string) => <li className={styles.TagItem}>{x}</li>)}
     </div>
   );
 }
