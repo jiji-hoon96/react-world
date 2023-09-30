@@ -1,5 +1,13 @@
 import { style } from '@vanilla-extract/css';
 
+export const TagDiv = style({
+  position: 'relative',
+  minHeight: 1,
+  paddingRight: 15,
+  paddingLeft: 15,
+  flex: '0 0 25%',
+});
+
 export const TagContainer = style({
   padding: 10,
   background: '#f3f3f3',
@@ -23,4 +31,8 @@ export const TagItem = style({
   paddingRight: ' 0.6em',
   paddingLeft: '0.6em',
   borderRadius: '10rem',
+  cursor: 'pointer',
+  ':hover': {
+    backgroundColor: '#677076',
+  },
 });

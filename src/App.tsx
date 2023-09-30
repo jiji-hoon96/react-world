@@ -5,8 +5,9 @@ import TagList from './components/TagList';
 
 export default function App() {
   const { data } = useQuery(['articleData'], () =>
-    fetch('https://api.realworld.io/api/articles').then((res) => res.json())
+    fetch(`${import.meta.env.VITE_SERVER_API}articles`).then((res) => res.json())
   );
+
   console.log(data);
   return (
     <div>
