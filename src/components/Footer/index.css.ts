@@ -6,7 +6,6 @@ export const footer = style({
   background: '#f3f3f3',
   marginTop: '3rem',
   padding: '1rem 0',
-  position: 'absolute',
   bottom: 0,
   width: '100%',
 });
