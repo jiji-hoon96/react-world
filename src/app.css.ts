@@ -12,6 +12,10 @@ export const homeLayout = style({
 
 export const homeLeftLayout = style({
   width: '70%',
+  position: 'relative',
+  minHeight: 1,
+  paddingLeft: 15,
+  paddingRight: 15,
 });
 
 export const homeRightLayout = style({
