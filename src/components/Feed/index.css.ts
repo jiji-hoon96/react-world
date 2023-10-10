@@ -9,12 +9,12 @@ export const FeedTitleContainer = style({
   margin: '0 0 1rem 0',
   display: 'block',
   position: 'relative',
+  justifyContent: 'center',
   fontWeight: 300,
 });
 
 export const FeedImage = style({
   display: 'inline-block',
-  verticalAlign: '"middle"',
   height: 32,
   width: 32,
   borderRadius: 30,

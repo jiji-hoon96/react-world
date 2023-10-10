@@ -1,16 +1,14 @@
-import { useQuery } from '@tanstack/react-query';
 import * as styles from './index.css';
 import { v4 as uuidv4 } from 'uuid';
 import { Article } from '@/types/Article';
 
-export default function Feed() {
-  const { data } = useQuery(['articleList'], () =>
-    fetch(`${import.meta.env.VITE_SERVER_API}articles`).then((res) => res.json())
-  );
-
+//TODOS : 여기 any 삭제하기
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function Feed({ article }: any) {
+  console.log(article);
   return (
     <div>
-      {data?.articles.map((article: Article) => (
+      {article?.articles.map((article: Article) => (
         <div key={uuidv4()} className={styles.FeedContainer}>
           <div className={styles.FeedTitleContainer}>
             <a>
