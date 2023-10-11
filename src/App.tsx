@@ -10,24 +10,31 @@ import { useState } from 'react';
 export default function App() {
   const [page, setPage] = useState<number>(0);
 
-  const { data } = useQuery(['articleList'], () =>
+  const { data, isLoading } = useQuery(['articleList'], () =>
     fetch(`${import.meta.env.VITE_SERVER_API}articles?limit=10&offset=${page}`).then((res) =>
       res.json()
     )
   );
+
   return (
     <div>
       <Banner />
-      <div className={styles.homeLayout}>
-        <div className={styles.homeLeftLayout}>
-          <FeedToggle />
-          <Feed article={data} />
-        </div>
-        <div className={styles.homeRightLayout}>
-          <TagList />
-        </div>
-      </div>
-      <Pagination />
+      {isLoading ? (
+        <div> 로딩중</div>
+      ) : (
+        <>
+          <div className={styles.homeLayout}>
+            <div className={styles.homeLeftLayout}>
+              <FeedToggle />
+              <Feed article={data} />
+            </div>
+            <div className={styles.homeRightLayout}>
+              <TagList />
+            </div>
+          </div>
+          <Pagination page={page} articlesCount={data.articlesCount} />
+        </>
+      )}
     </div>
   );
 }
